@@ -29,7 +29,14 @@ function Header() {
             .catch((err) => {
                 console.log(err)
             })
-            // eslint-disable-next-line
+        // eslint-disable-next-line
+    }, [])
+    useEffect(() => {
+        let token = localStorage.carer_token
+        if (token !== undefined) {
+            navigate('/home')
+        }
+        // eslint-disable-next-line
     }, [])
     return (
         <HeaderContainer>
