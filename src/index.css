@@ -1,8 +1,24 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  @font-face {
+    font-family: 'NotoSansJP-Medium';
+    src: local('NotoSansJP-Medium'), url('./fonts/NotoSansJP-Medium.otf') format('truetype');
+  }
+}
+
+body {
+  --primary-color-dark: #0077B6;
+  --primary-color-light: #EDFAFD;
+  --secondary-color-dark: #00B4D8;
+  --secondary-color-light: #BCECF6;
+  --primary-color-dark-heading: #000E14;
+  --primary-color-dark-text: #001B29;
+  --secondary-color-light-heading: #1DA8C3;
+  --secondary-color-light-text: #90E0EF;
+  --spinner-color: #0077B6;
+  margin: 0;
+  font-family: 'NotoSansJP-Medium';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
