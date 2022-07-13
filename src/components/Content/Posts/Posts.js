@@ -40,6 +40,7 @@ function Posts() {
             })
     }
     useEffect(() => {
+        data = []
         let city = queryString.parse(location.search);
         instance.get(`posts/all_posts/${city?.city?.toLowerCase()}`)
             .then((response) => {
@@ -61,6 +62,7 @@ function Posts() {
                         )
                     }
                 });
+                console.log(data)
                 setData(data);
             }).catch((error) => {
                 alert(error);
