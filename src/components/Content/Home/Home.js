@@ -8,7 +8,7 @@ function Home() {
     let navigate = useNavigate()
     useEffect(() => {
         let token = localStorage.carer_token
-        if(!token) {
+        if(!token || token===undefined) {
             navigate('/')
         }
         // eslint-disable-next-line
