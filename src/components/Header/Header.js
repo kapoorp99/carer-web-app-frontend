@@ -33,8 +33,8 @@ function Header() {
     }, [])
     useEffect(() => {
         let token = localStorage.carer_token
-        if (token !== undefined) {
-            navigate('/home')
+        if (!token || token === undefined) {
+            navigate('/')
         }
         // eslint-disable-next-line
     }, [])

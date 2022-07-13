@@ -13,7 +13,6 @@ function AddPost() {
     const [success, setSuccess] = useState(null);
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        console.log(e)
         instance.post(`/posts/add_post`, {
             city: e.target.city.value.toLowerCase(),
             message: e.target.message.value,
@@ -28,13 +27,13 @@ function AddPost() {
                 alert(error);
             })
     }
-    useEffect(() => {
-        let token = localStorage.carer_token
-        if (!token) {
-            navigate('/')
-        }
-        // eslint-disable-next-line
-    }, [])
+    // useEffect(() => {
+    //     let token = localStorage.carer_token
+    //     if (!token) {
+    //         navigate('/')
+    //     }
+    //     // eslint-disable-next-line
+    // }, [])
     return (
         <>
             <Header />
