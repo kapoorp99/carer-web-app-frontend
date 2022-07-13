@@ -7,11 +7,11 @@ function Login() {
     let navigate = useNavigate()
     const [disabled, setDisabled] = useState(false);
     const getProfile = (uid) => {
-        console.log(uid)
         instance.post(`/users/userprofile/${uid}`)
             .then((res) => {
                 console.log(res.data)
                 localStorage.setItem('carer_user', JSON.stringify(res.data))
+                navigate('/home')
             })
             .catch((err) => {
                 console.log(err)
@@ -28,7 +28,6 @@ function Login() {
                 localStorage.setItem('carer_token', res.data.token)
                 let uid = res.data.id
                 getProfile(uid)
-                navigate('/home')
             })
             .catch((err) => { console.log(err) })
     }
