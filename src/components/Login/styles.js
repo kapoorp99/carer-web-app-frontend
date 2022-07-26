@@ -30,6 +30,10 @@ export const LoginInnerContainer = styled.div`
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    >form {
+        display: flex;
+        flex-direction: column;
+    }
 
     > h1 {
         font-size: xx-large;
@@ -65,6 +69,10 @@ export const SignupInnerContainer = styled.div`
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    >form {
+        display: flex;
+        flex-direction: column;
+    }
 
     > h1 {
         font-size: xx-large;

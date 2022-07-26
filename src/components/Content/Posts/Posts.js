@@ -88,11 +88,11 @@ function Posts() {
         <>
             <Header />
             <PostsContainer>
-                {data.length > 0 ? (
+                {/* {data.length > 0 ? (
                     <h1>{data.length} Search Results</h1>
                 ) : (
                     <h1>No Results Found</h1>
-                )}
+                )} */}
                 {data && data.map((p, i) => (
                     <CardContainer key={i}>
                         <h3>{p.name}</h3>
