@@ -12,6 +12,11 @@ export const MainContainer = styled.div`
 export const SubContainer = styled.div`
     display: flex;
     height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    @media(max-width: 768px){
+        flex-direction: column;
+    }
 `;
 export const LoginContainer = styled.div`
     background-color: var(--primary-color-light);
@@ -33,6 +38,14 @@ export const LoginInnerContainer = styled.div`
     >form {
         display: flex;
         flex-direction: column;
+        gap: 1rem;
+        >input{
+            border: none;
+            outline: none;
+            padding: 5px 12px;
+            border-radius: 5px;
+            font-size: medium;
+        }
     }
 
     > h1 {
@@ -40,6 +53,7 @@ export const LoginInnerContainer = styled.div`
         font-weight: 700;
         letter-spacing: 0.5rem;
         color: var(--primary-color-dark-heading);
+        margin-bottom: 1rem;
     }
 
     > button {
@@ -72,6 +86,14 @@ export const SignupInnerContainer = styled.div`
     >form {
         display: flex;
         flex-direction: column;
+        gap: 1rem;
+        >input{
+            border: none;
+            outline: none;
+            padding: 5px 12px;
+            border-radius: 5px;
+            font-size: medium;
+        }
     }
 
     > h1 {
@@ -79,6 +101,7 @@ export const SignupInnerContainer = styled.div`
         font-weight: 700;
         letter-spacing: 0.5rem;
         color: var(--primary-color-dark-heading);
+        margin-bottom: 1rem;
     }
 
     > button {
